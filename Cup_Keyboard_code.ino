@@ -1,11 +1,12 @@
 /*
 Cup Keyboard
-a keyboard in a whole note octave that uses photoresistors to 
+a keyboard in a whole note octave that uses photoresistors to make note sounds
+By Lauren Krauss
 */
 #include "pitches.h"
 
 //constants
-const int photoPin = A0;
+const int photoPin = A0; 
 const int photoPin2 = A1;
 const int photoPin3 = A2;
 const int photoPin4 = A3;
@@ -17,6 +18,7 @@ const int piezo3 = 5;
 const int piezo4 = 4;
 const int piezo5 = 3;
 const int piezo6 = 2;
+//these constants are for the photoresistors(photopin) and the piezo buzzers(piezo)
 
 
 // variables
@@ -26,6 +28,7 @@ int photo_value3;
 int photo_value4;
 int photo_value5;
 int photo_value6;
+//(these variables are for the values returned by the photoresistors)
 
 void setup()
 {
@@ -36,6 +39,7 @@ void setup()
   pinMode(piezo4, OUTPUT);
   pinMode(piezo5, OUTPUT);
   pinMode(piezo6, OUTPUT);
+  //sets all the piezo buzzers to outputs
 
   Serial.begin(9600); // setting up the serial monitor
 
@@ -53,7 +57,7 @@ void loop()
   photo_value5 = analogRead(photoPin5);
   photo_value6 = analogRead(photoPin6);
 
-  Serial.print("I just read: "); //Print the text 'i just read' on the serial monitor
+  Serial.print("I just read: "); //Print the text 'i just read' on the serial monitor and also the photo values (helpful for adjusting thresholding)
   Serial.println(photo_value);
   Serial.println(photo_value2);
   Serial.println(photo_value3);
@@ -61,15 +65,13 @@ void loop()
   Serial.println(photo_value5);
   Serial.println(photo_value6);
 
-  //Print pot_value and go to next line
-
-
+//the if else statements for the activation of the piezo speakers
   {
 
     {
-      if (photo_value < 70)
+      if (photo_value < 80)
       {
-        tone(piezo, NOTE_C6);
+        tone(piezo, NOTE_C7);
       }
       else
       {
@@ -77,9 +79,9 @@ void loop()
       }
     }
     {
-      if (photo_value2 < 100)
+      if (photo_value2 < 80)
       {
-        tone(piezo2, NOTE_D6);
+        tone(piezo2, NOTE_D7);
       }
       else
       {
