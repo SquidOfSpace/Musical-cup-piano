@@ -1,12 +1,12 @@
 /*
-Cup Keyboard
-a keyboard in a whole note octave that uses photoresistors to make note sounds
-By Lauren Krauss
+  Cup Keyboard
+  a keyboard in a whole note octave that uses photoresistors to make note sounds
+  By Lauren Krauss
 */
 #include "pitches.h"
 
 //constants
-const int photoPin = A0; 
+const int photoPin = A0;
 const int photoPin2 = A1;
 const int photoPin3 = A2;
 const int photoPin4 = A3;
@@ -58,13 +58,17 @@ void loop()
   Serial.println(photo_value4);
 
 
-//the if else statements for the activation of the piezo speakers
+  //the if else statements for the activation of the piezo speakers
   {
+
+
+
+
 
     {
       if (photo_value < 80)
       {
-        tone(piezo, NOTE_C7);
+        tone(piezo, NOTE_E7);
       }
       else
       {
@@ -74,7 +78,7 @@ void loop()
     {
       if (photo_value2 < 80)
       {
-        tone(piezo2, NOTE_D7);
+        tone(piezo2, NOTE_F7);
       }
       else
       {
@@ -83,9 +87,9 @@ void loop()
     }
     {
 
-      if (photo_value3 < 80)
+      if (photo_value3 <  90)
       {
-        tone(piezo3, NOTE_E7);
+        tone(piezo3, NOTE_C7);
       }
       else
       {
@@ -93,16 +97,16 @@ void loop()
       }
     }
     {
-      if (photo_value4 < 80)
+      if (photo_value4 <  90)
       {
-        tone(piezo4, NOTE_F7);
+        tone(piezo4, NOTE_D7);
       }
       else
       {
         noTone(piezo4);
       }
     }
-      }
-    }
+  }
+}
 
 
