@@ -2,18 +2,19 @@
 
 Musical Cup Piano
 
+![Cup Keyboard](https://i.gyazo.com/a296532e3716f50373c50340b9cd006c.jpg)
+
 ## Items Needed
 
 My build has:
 
--Arduino x2
--Photoresistors x8
--Breadboards x4
--560 ohm resistors x8
--Piezo speakers x8
-(additional resistors may be needed depending on the piezo speaker)
--2 boxes (about shoebox size)
--8 plastic shot class cups
+	-Arduino x2
+	-Photoresistors x8
+	-Breadboards x4
+	-560 ohm resistors x8
+	-Piezo speakers x8 (additional resistors may be needed depending on the piezo speaker)
+	-2 boxes (about shoebox size)
+	-8 plastic shot class cups
 
 ### Installing
 
