@@ -16,7 +16,7 @@ const int piezo2 = 6;
 const int piezo3 = 5;
 const int piezo4 = 4;
 
-//these constants are for the photoresistors(photopin) and the piezo buzzers(piezo)
+//these constants are for the photoresistors(photopin) and the piezo buzzers(piezo)xxx
 
 
 // variables
@@ -68,7 +68,7 @@ void loop()
     {
       if (photo_value < 80)
       {
-        tone(piezo, NOTE_B7);
+        tone(piezo, NOTE_C7);
       }
       else
       {
@@ -78,7 +78,7 @@ void loop()
     {
       if (photo_value2 < 80)
       {
-        tone(piezo2, NOTE_C7);
+        tone(piezo2, NOTE_B6);
       }
       else
       {
@@ -89,7 +89,7 @@ void loop()
 
       if (photo_value3 <  90)
       {
-        tone(piezo3, NOTE_G7);
+        tone(piezo3, NOTE_A6);
       }
       else
       {
@@ -99,7 +99,7 @@ void loop()
     {
       if (photo_value4 <  90)
       {
-        tone(piezo4, NOTE_A7);
+        tone(piezo4, NOTE_G6);
       }
       else
       {

@@ -68,7 +68,7 @@ void loop()
     {
       if (photo_value < 80)
       {
-        tone(piezo, NOTE_E7);
+        tone(piezo, NOTE_C6);
       }
       else
       {
@@ -78,7 +78,7 @@ void loop()
     {
       if (photo_value2 < 80)
       {
-        tone(piezo2, NOTE_F7);
+        tone(piezo2, NOTE_D6);
       }
       else
       {
@@ -87,9 +87,9 @@ void loop()
     }
     {
 
-      if (photo_value3 <  90)
+      if (photo_value3 <  50)
       {
-        tone(piezo3, NOTE_C7);
+        tone(piezo3, NOTE_E6);
       }
       else
       {
@@ -97,9 +97,9 @@ void loop()
       }
     }
     {
-      if (photo_value4 <  90)
+      if (photo_value4 <  50)
       {
-        tone(piezo4, NOTE_D7);
+        tone(piezo4, NOTE_F6);
       }
       else
       {
